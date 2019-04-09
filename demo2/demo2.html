@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    window.onload = () => {
+        //函数的参数
+        //1.参数扩展/展开
+        //2.默认参数
+
+        //参数扩展
+        //1.收集剩余的参数,必须放在最后
+        let show = (a,b,c,...args)=>{
+            alert(c) //3
+            alert(args)//4，5，6
+        }
+        show(1,2,3,4,5,6)
+
+        //展开数组
+        //展开后的效果，跟直接把数组的内容写在这一样
+        let arr1 = [1,2,3,4]
+        let arr2 = [5,6,7]
+        let arr = [...arr1,...arr2]
+        alert(arr)//1,2,3,4,5,6,7
+
+    }
+</script>
+</html>
