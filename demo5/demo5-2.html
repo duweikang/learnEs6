@@ -11,15 +11,14 @@
 </body>
 <script>
     window.onload = () => {
-        //字符串
-        // 1.多了两个访法
-        // startsWith
-        // endsWidth
-
-        // 2.字符串模版
-        // 字符串连接
-        // 1.直接把东西塞到字符串里面 ${东西}
-        // 2.可以折行
+        let email = 'admin@qq.com'
+        if(email.endsWith('@qq.com')){
+            alert('QQ邮箱')
+        }else if(email.endsWith('@163.com')){
+            alert('163邮箱')
+        }else{
+            alert('其他邮箱')
+        }
     }
 </script>
 </html>

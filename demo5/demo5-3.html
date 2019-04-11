@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+<script>
+    window.onload = () => {
+        let name ='testdu'
+        let title = 'paython学习之路'
+        let content = 'python精髓内容'
+
+        let domStr = `
+            <h3>标题：${title}</h3>
+            <p>作者：${name}</p>
+            <div>内容：${content}</div>
+        `
+        document.getElementById('box').innerHTML=domStr
+    }
+</script>
+</html>
