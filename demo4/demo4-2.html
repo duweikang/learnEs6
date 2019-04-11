@@ -11,7 +11,21 @@
 </body>
 <script>
     window.onload = () => {
-        
+        let arr = [12,34,45,67,123]
+        let result = arr.reduce(function(tmp,item,index){
+            // alert(tmp+','+item+','+index)
+
+            //求和
+            // return tmp+item
+
+            //平均数
+            if(index != arr.length-1){
+                return tmp+item
+            }else{
+                return (tmp+item)/arr.length
+            }
+        })
+        alert(result)
     }
 </script>
 </html>
