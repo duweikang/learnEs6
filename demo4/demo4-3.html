@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    window.onload = () => {
+        let arr = [23,35,55,66,89]
+        // let result = arr.filter(item => {
+        //     if(item%3==0){
+        //         return true
+        //     }else{
+        //         return false
+        //     }
+        // })
+        let result = arr.filter(item => item%3==0)
+        alert(result)
+
+        let list = [
+            {title:'男装',price:199},
+            {title:'男鞋',price:155},
+            {title:'女装',price:1999},
+            {title:'女鞋',price:1255}
+        ]
+        let listRes = list.filter(json => json.price>1000)
+        console.log(listRes)
+    }
+</script>
+</html>
