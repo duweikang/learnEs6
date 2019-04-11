@@ -10,15 +10,15 @@
     
 </body>
 <script>
-    //数组
-    //map  映射 一个对一个
-    //[23,34,67,68] => [‘不及格’,‘不及格’,‘及格’,‘及格’]
-
-    //reduce 汇总
-    //[10,10,10,10] => 40 求和
-    //[10,10,10,10] => 10 平均数
-
-    //filter 过滤器
-    //forEach 循环(迭代器)
+    window.onload = () => {
+        let url = 'https://www.baidu.com'
+        if(url.startsWith('http://')){
+            alert('普通网址')
+        }else if(url.startsWith('https://')){
+            alert('安全网址')
+        }else{
+            alert('其他')
+        }
+    }
 </script>
 </html>
