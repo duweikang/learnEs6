@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    let p1 = new Promise(function(resolve,reject){
+        //异步代码
+        //resolve--成功
+        //reject--失败
+        $.ajax({
+            url:'./arr.txt',
+            dataType:'json',
+            success(data){
+                resolve(data)
+            },
+            error(error){
+                reject(error)
+            }
+        })
+    })
+
+    let p2 = new Promise(function(resolve,reject){
+        //异步代码
+        //resolve--成功
+        //reject--失败
+        $.ajax({
+            url:'./json.txt',
+            dataType:'json',
+            success(data){
+                resolve(data)
+            },
+            error(error){
+                reject(error)
+            }
+        })
+    })
+
+    // p1.then(function(data){
+    //     alert('success'+data)
+    // },function(error){
+    //     alert('fail'+error)
+    // })
+
+    Promise.all([p1,p2]).then(function(arr){
+        alert('全部成功了')
+        let [rs1,rs2] = arr
+        console.log(arr)
+        console.log(rs1)
+        console.log(rs2)
+    },function(){
+        alert('至少有一个失败了')
+    })
+</script>
+</html>
