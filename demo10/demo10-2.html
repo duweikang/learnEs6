@@ -10,10 +10,17 @@
     
 </body>
 <script>
-    //普通函数--一路到底
-    //generator函数-中间能停
+    function *show(name,age){
+        alert(`${name},${age}`)
 
-    //yield传参
-    //yield返回
+        let a = yield
+
+        alert('a')
+        alert(a)
+    }
+
+    let genObj = show('testdu',24)
+    genObj.next()
+    genObj.next(12)
 </script>
 </html>

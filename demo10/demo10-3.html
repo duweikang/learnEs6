@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function *show(){
+        alert('a')
+
+        yield 12
+
+        alert('b')
+
+        return 55
+    }
+
+    let genObj = show()
+
+    let res1 = genObj.next()
+    console.log(res1) //{value: 12, done: false}
+
+    let res2 = genObj.next()
+    console.log(res2) //{value: undefined, done: true}
+    //return 55  {value: 55, done: true}
+
+
+</script>
+</html>
